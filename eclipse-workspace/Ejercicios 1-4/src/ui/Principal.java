@@ -34,7 +34,7 @@ public class Principal {
 		Scanner lector = new java.util.Scanner(System.in);
 		
 		
-		/*
+		
 		for (int i = 0; i < palabras.length; i++) {
 			System.out.println("Ingrese la palabra "+(i+1));
 	        palabras[i]=lector.nextLine();
@@ -53,7 +53,7 @@ public class Principal {
 				System.out.println("La palabra ingresada ya pertenece a las 10 primeras.");
 			}
 		}
-		*/
+		
 		
 		/*
 		System.out.println("Ingrese un entero: ");
