@@ -1,2 +1,2 @@
-# JAVA
+# Ejercicios-JAVA
 Programación en JAVA
