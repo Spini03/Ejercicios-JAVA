@@ -1,2 +1,33 @@
 2023-04-16 18:19:15,311 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2023-04-18 17:41:42,573 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2023-04-20 15:25:25,004 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-20 15:25:38,448 [Worker-5: Computing Git status for repository Ejercicios-JAVA] ERROR o.e.j.i.storage.file.PackDirectory - Exception caught while accessing pack file C:\Users\Santi\OneDrive - frro.utn.edu.ar\Documentos\Electivas UTN\Lenguaje de Programación JAVA\Ejercicios-JAVA\.git\objects\pack\pack-457a42b86a16c8015b94ab4ef64e22f36c32fee9.pack, the pack file might be corrupt. Caught 1 consecutive errors while trying to read this pack.
+java.io.IOException: Unreadable pack index: C:\Users\Santi\OneDrive - frro.utn.edu.ar\Documentos\Electivas UTN\Lenguaje de Programación JAVA\Ejercicios-JAVA\.git\objects\pack\pack-457a42b86a16c8015b94ab4ef64e22f36c32fee9.idx
+	at org.eclipse.jgit.internal.storage.file.PackIndex.open(PackIndex.java:69)
+	at org.eclipse.jgit.internal.storage.file.Pack.idx(Pack.java:160)
+	at org.eclipse.jgit.internal.storage.file.Pack.get(Pack.java:272)
+	at org.eclipse.jgit.internal.storage.file.PackDirectory.open(PackDirectory.java:219)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedObject(ObjectDirectory.java:420)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedFromSelfOrAlternate(ObjectDirectory.java:384)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openObjectWithoutRestoring(ObjectDirectory.java:375)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openObject(ObjectDirectory.java:360)
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:140)
+	at org.eclipse.jgit.lib.ObjectReader.open(ObjectReader.java:216)
+	at org.eclipse.jgit.revwalk.RevWalk.parseAny(RevWalk.java:1110)
+	at org.eclipse.jgit.revwalk.RevWalk.parseTree(RevWalk.java:1048)
+	at org.eclipse.jgit.lib.IndexDiff.<init>(IndexDiff.java:290)
+	at org.eclipse.jgit.lib.IndexDiff.<init>(IndexDiff.java:271)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.lambda$8(IndexDiffCacheEntry.java:632)
+	at org.eclipse.egit.core.UnitOfWork.run(UnitOfWork.java:115)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:627)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$2.reload(IndexDiffCacheEntry.java:398)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$IndexDiffReloadJob.run(IndexDiffCacheEntry.java:775)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: El proveedor de archivos de nube no se está ejecutando
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:276)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:201)
+	at org.eclipse.jgit.internal.storage.file.PackIndex.read(PackIndex.java:96)
+	at org.eclipse.jgit.internal.storage.file.PackIndex.open(PackIndex.java:67)
+	... 19 common frames omitted
+2023-04-20 17:16:01,094 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
