@@ -29,7 +29,7 @@ public class Administrativo extends Empleado {
 		System.out.println("Ingrese las horas extras del administrativo: ");
 		this.setHsExtra(Float.parseFloat(lector.nextLine()));
 		System.out.println("Ingrese las horas totales en el mes del administrativo: ");
-		this.setHsMes(Float.parseFloat(lector.nextLine()));
+		this.setHsMes(Double.parseDouble(lector.nextLine()));
 
 		lector.close();
 		
